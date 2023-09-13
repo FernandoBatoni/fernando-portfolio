@@ -1,0 +1,9 @@
+---
+interface Props {
+	href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a class="call-to-action" href={href}><slot /></a>

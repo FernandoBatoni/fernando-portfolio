@@ -1,21 +1,19 @@
 ---
-import Icon from './Icon.astro';
+import Icon from '../Icon.astro';
 const currentYear = new Date().getFullYear();
 ---
 
 <footer>
 	<div class="group">
 		<p>
-			Designed & Developed in Portland with <a href="https://astro.build/">Astro</a>
+			Designed & Developed in Brazil with <a href="https://astro.build/">Astro &nbsp;</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Jeanine White</p>
+
+		<p>
+      &copy; {currentYear} Fernando Batoni Areias
+    </p>
 	</div>
-	<p class="socials">
-		<a href="https://twitter.com/me"> Twitter</a>
-		<a href="https://github.com/me"> GitHub</a>
-		<a href="https://codepen.io/me"> CodePen</a>
-	</p>
 </footer>
 <style>
 	footer {
@@ -44,14 +42,8 @@ const currentYear = new Date().getFullYear();
 	.group {
 		display: flex;
 		flex-direction: column;
+    justify-content: space-between;
 		gap: 0.5rem;
-	}
-
-	.socials {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		flex-wrap: wrap;
 	}
 
 	@media (min-width: 50em) {
@@ -65,10 +57,6 @@ const currentYear = new Date().getFullYear();
 			flex-direction: row;
 			gap: 1rem;
 			flex-wrap: wrap;
-		}
-
-		.socials {
-			justify-content: flex-end;
 		}
 	}
 </style>
