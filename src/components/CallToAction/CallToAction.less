@@ -3,7 +3,7 @@
   display: flex;
   place-content: center;
   text-align: center;
-  padding: 0.56em 2em;
+  padding: 1.56em 2em;
   gap: 0.8em;
   color: var(--accent-text-over);
   text-decoration: none;
@@ -13,32 +13,27 @@
   background: var(--gradient-accent-orange);
   box-shadow: var(--shadow-md);
   white-space: nowrap;
-}
 
-@media (min-width: 20em) {
-  .call-to-action {
-    font-size: var(--text-lg);
+  /* Overlay for hover effects. */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: background-color var(--theme-transition);
+    mix-blend-mode: overlay;
   }
-}
 
-/* Overlay for hover effects. */
-.call-to-action::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  transition: background-color var(--theme-transition);
-  mix-blend-mode: overlay;
-}
+  &:focus::after, &:hover::after {
+    background-color: hsla(var(--gray-999-basis), 0.3);
+  }
 
-.call-to-action:focus::after,
-.call-to-action:hover::after {
-  background-color: hsla(var(--gray-999-basis), 0.3);
-}
+  @media @phone-sm {
+    font-size: var(--text-md);
+  }
 
-@media (min-width: 50em) {
-  .call-to-action {
+  @media @tab-md {
     padding: 1.125rem 2.5rem;
-    font-size: var(--text-xl);
+    font-size: var(--text-md);
   }
 }
