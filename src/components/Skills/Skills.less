@@ -1,38 +1,31 @@
-.box {
+.skills {
+  background-color: var(--gray-999_40);
   border: 1px solid var(--gray-800);
   border-radius: 0.75rem;
-  padding: 1.5rem;
-  background-color: var(--gray-999_40);
   box-shadow: var(--shadow-sm);
-}
-
-.skills {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-}
+  padding: 1.5rem;
 
-.skills h2 {
-  font-size: var(--text-lg);
-}
+  & h2 {
+    font-size: var(--text-lg);
 
-.skills p {
-  color: var(--gray-400);
-}
+    @media @tab-lg-min {
+      font-size: var(--text-2xl);
+    }
+  }
 
-@media @tab-min-lg {
-  .box {
+  & p {
+    color: var(--gray-400);
+  }
+
+  @media @tab-lg-min {
     border-radius: 1.5rem;
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
     padding: 2.5rem;
   }
-
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
-  }
-
-  .skills h2 {
-    font-size: var(--text-2xl);
-  }
 }
+
