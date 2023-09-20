@@ -1,26 +1,7 @@
 ---
 import Icon from '../Icon/Icon.astro';
-import ThemeToggle from '../ThemeToggle/ThemeToggle.astro';
-import type { iconPaths } from '../Icon/IconPaths';
-
-interface IIconLinks {
-  label: string
-  href: string
-  icon: keyof typeof iconPaths
-};
-
-/** Main menu items */
-const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
-];
-
-const iconLinks: IIconLinks[] = [
-	{ label: 'Linkedin', href: 'https://twitter.com/me', icon: 'linkedin-logo' },
-	{ label: 'Instagram', href: 'https://twitch.tv/me', icon: 'instagram-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
-];
+import NavMobile from './NavMobile.astro'
+import { textLinks, iconLinks } from './navConstants';
 ---
 
 <nav>
@@ -67,7 +48,7 @@ const iconLinks: IIconLinks[] = [
 			<div class="socials">
 				{
 					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
+						<a href={href} class="social" rel="noopener noreferrer" target='_blank'>
 							<span class="sr-only">{label}</span>
 							<Icon icon={icon} />
 						</a>
@@ -76,46 +57,7 @@ const iconLinks: IIconLinks[] = [
 			</div>
 		</div>
 	</noscript>
-	<div id="menu-content" hidden>
-		<ul class="nav-items">
-			{
-				textLinks.map(({ label, href }) => (
-					<li>
-						<a
-							aria-current={Astro.url.pathname === href}
-							class:list={[
-								'link',
-								{
-									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
-								},
-							]}
-							href={href}
-						>
-							{label}
-						</a>
-					</li>
-				))
-			}
-		</ul>
-		<div class="menu-footer">
-			<div class="socials">
-				{
-					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
-							<span class="sr-only">{label}</span>
-							<Icon icon={icon} />
-						</a>
-					))
-				}
-			</div>
-
-			<div class="theme-toggle">
-				<ThemeToggle />
-			</div>
-		</div>
-	</div>
+  <NavMobile />
 </nav>
 
 <script>

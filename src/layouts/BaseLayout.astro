@@ -1,17 +1,18 @@
 ---
+import { astroI18n } from "astro-i18n";
 import MainHead from '../components/MainHead/MainHead.astro';
 import Nav from '../components/Nav/Nav.astro';
 import Footer from '../components/Footer/Footer.astro';
-
 interface Props {
-	title: string;
+	title?: string;
 	description?: string;
 }
 
 const { title, description } = Astro.props;
+astroI18n.init(Astro);
 ---
 
-<html lang="pt-BR">
+<html lang={astroI18n.langCode}>
 	<head>
 		<MainHead title={title} description={description} />
 	</head>

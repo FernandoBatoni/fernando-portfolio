@@ -1,17 +1,18 @@
 ---
 import Icon from '../Icon/Icon.astro';
+import { t } from "astro-i18n";
 ---
 
 <section class="skills text-justify">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Full stack developer since 2020, with focus on web development.</p>
+		<h2>{t("singleWords.fullStack")}</h2>
+		<p>{t("skills.fullStack")}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Chalenge Seaker</h2>
-		<p>Always in search of new challenges and projects to better my skills in the field.</p>
+		<h2>{t("singleWords.challengeSeaker")}</h2>
+		<p>{t("skills.challenge")}</p>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />

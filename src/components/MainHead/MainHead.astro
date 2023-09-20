@@ -1,6 +1,4 @@
 ---
-import { astroI18n } from "astro-i18n";
-
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -10,8 +8,6 @@ const {
 	title = 'Fernando Batoni Portfolio',
 	description = 'Portfolio containing my work and side projects',
 } = Astro.props;
-
-astroI18n.init(Astro);
 ---
 
 <meta charset="UTF-8" />
