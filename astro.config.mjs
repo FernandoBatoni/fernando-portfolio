@@ -12,5 +12,5 @@ export default defineConfig({
     host: true
   },
 
-  site: 'https:://fernando.batoni.github.io'
+  // site: 'https:://fernando.batoni.github.io'
 });
