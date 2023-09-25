@@ -1,10 +1,12 @@
 {
   "skills": {
     "fullStack": "Full stack developer since 2020, with focus on web development.",
-    "challenge": "Always in search of new challenges and projects to better my skills in the field."
+    "challenge": "Always in search of new challenges and projects to better my skills in the field.",
+    "strategy": "Great team communication skills and focus in providing the best service."
   },
   "singleWords": {
     "fullStack": "Full Stack",
-    "challengeSeaker": "Challenge Hunter"
+    "challengeSeaker": "Challenge Hunter",
+    "strategy": "Strategy-Minded"
   }
 }

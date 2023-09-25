@@ -1,11 +1,13 @@
 {
   "skills": {
     "fullStack": "Desenvolvedor Full Stack, com enfâse em desenvolvimento web.",
-    "challenge": "Sempre a procura de novos desafios e novos projetos para evoluir."
+    "challenge": "Sempre a procura de novos desafios e novos projetos para evoluir.",
+    "strategy": "Grande capacidade de comunicação em equipe e foco em fornecer o melhor serviço."
   },
 
   "singleWords": {
     "fullStack": "Full Stack",
-    "challengeSeaker": "Caçador de Desafios"
+    "challengeSeaker": "Caçador de Desafios",
+    "strategy": "Estratégico"
   }
 }
