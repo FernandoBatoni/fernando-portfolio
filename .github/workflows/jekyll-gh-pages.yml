@@ -20,9 +20,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-      # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
+
+      - name: Install Bun
+        uses: oven-sh/setup-bun@v1
+
       - name: Build Astro
         run: bun astro build --if-present
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
